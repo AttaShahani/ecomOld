@@ -1,0 +1,40 @@
+@import "mixin.scss";
+.header {
+  .hamburger{
+    // display: none;
+    font-size: 3rem;
+    margin: auto 0;
+    color: #fff;
+    }
+  @include flex(row,space-between,center,0);
+  background-color: $darkColor;
+  padding: 0.5rem;
+  .logo {
+    margin-left: 10rem;
+    img {
+      width: 15rem;
+      filter: invert(1);
+      transition: all 2s;
+      &:hover{
+        filter: brightness(0) saturate(100%) invert(65%) sepia(80%) saturate(1950%) hue-rotate(287deg) brightness(101%) contrast(102%);
+      }
+    }
+  }
+  .nav {
+    @include flex(row,center,center,5rem);
+    margin-right: 5rem;
+    ul {
+        @include flex();
+      li {
+        a {
+          font-size: 1.8rem;
+          color: $whiteColor;
+          transition: all .5s;
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
