@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 const Header = () => {
   return (
-    <header className='header'>
+    <>
     <div className="hamburger"><GiHamburgerMenu/></div>
+    <header className='header show'>
     <div className="logo"><Link to={"/"}> <img src="src/images/logo.png" alt="Logo" /> </Link></div>
     <nav className="nav">
         <ul className="navItems">
@@ -23,6 +24,7 @@ const Header = () => {
     </nav>
 
     </header>
+    </>
   )
 }
 

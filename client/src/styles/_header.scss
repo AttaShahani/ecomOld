@@ -1,11 +1,12 @@
 @import "mixin.scss";
+.hamburger{
+  display: none;
+  font-size: 4rem;
+  :hover{
+    color: $primaryColor;
+  }
+  }
 .header {
-  .hamburger{
-    // display: none;
-    font-size: 3rem;
-    margin: auto 0;
-    color: #fff;
-    }
   @include flex(row,space-between,center,0);
   background-color: $darkColor;
   padding: 0.5rem;
@@ -37,4 +38,7 @@
       }
     }
   }
+}
+.header.showBurgerMenu{
+  display: flex ;
 }
