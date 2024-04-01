@@ -1,0 +1,66 @@
+footer.footer {
+    background-color: $darkColor;
+    color: $halfWhite;
+    // @include flex(row,space-between,unset,0);
+    display: grid;
+    grid-template-columns: (1fr 1fr 1fr);
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    .leftFooter{
+        h2{
+            @include hed3(1.6rem,600,"Roboto",0.1rem);
+            padding: 0.4rem 1rem;
+            text-align: center;
+            
+        }
+        .images{
+            @include flex(column,unset,center,1rem);
+            img{
+                width: 15rem;
+                cursor: pointer;
+            }
+        }
+    }
+    .midFooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            @include hed1(3.5rem,600,"Roboto",0.2rem);
+            padding-top: 3rem;
+            cursor: pointer;
+            transition: all 0.5s;
+            &:hover{
+                color: $primaryColor;
+            }
+        }
+        .paras{
+            @include para(1.6rem,400,"Droid Sans");
+        }
+    }
+    .rightFooter{
+        @include flex(column,unset,unset,1rem);
+        place-items: end;
+        h2{
+            @include hed3(1.6rem,600,"Roboto",0.1rem);
+            text-decoration:underline; 
+            margin-top: 3rem;
+        }
+        ul{
+            li{
+                margin: 0.5rem 0;
+                a{
+                    font-size: 1.6rem;
+                    color: $halfWhite;
+                    font-family: "Droid Sans";
+                    transition: all 0.5s;
+                    &:hover{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}

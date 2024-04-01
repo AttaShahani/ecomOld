@@ -1,0 +1,35 @@
+@mixin flex($dir:row,$jcc:center,$aic:center,$gap:1rem){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jcc;
+    align-items: $aic;
+    gap: $gap;
+}
+@mixin hed1($fos:3.5rem,$fow:600,$fof:"Roboto",$lspacing:0.1rem){
+    font-size:$fos;
+    font-weight: $fow;
+    font-family: $fof;
+    letter-spacing: $lspacing;
+}
+@mixin hed3($fos:1.5rem,$fow:500,$fof:"Roboto",$lspacing:0.1rem){
+    font-size:$fos;
+    font-weight: $fow;
+    font-family: $fof;
+    letter-spacing: $lspacing;
+}
+@mixin button($pad:1rem 2rem,$fos:1.5rem, $fow:600,$color,$bacol,$border, $borr) {
+    padding: $pad;
+    font-size: $fos;
+    font-weight: $fow;
+    color: $color;
+    background-color: $bacol;
+    border: $border;
+    outline: none;
+    border-radius: $borr;
+    cursor: pointer;
+}
+@mixin para($fos:1.8rem,$fow:500,$fof:"Roboto"){
+    font-size: $fos;
+    font-weight: $fow;
+    font-family: $fof;
+}

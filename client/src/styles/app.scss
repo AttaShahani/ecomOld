@@ -1,23 +1,27 @@
 :root{
-    font-family: Roboto;
-    line-height: 1.5;
-    font-weight: 400;
     font-size: 62.5%;
 }
-$whiteColor : #ffffffd7;
-$primaryColor:#FF71CD;
-$darkColor:#496989;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+li{
+    list-style: none;
+}
 a{
     text-decoration: none;
 }
-ul li {
-    list-style: none
-}
-@import "mixin";
+$primaryColor:#FF8C32;
+$darkColor:#06113C;
+
+$secondaryColor:#DDDDDD;
+$tertiaryColor:#EEEEEE;
+
+$pureWhite:#fff;
+$halfWhite:#d3d3d3;
+@import "mixins";
 @import "header";
-@import "mediaqueries"
+@import "home";
+@import "footer";
+@import "mediaqueries";
