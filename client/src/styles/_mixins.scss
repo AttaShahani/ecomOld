@@ -33,3 +33,8 @@
     font-weight: $fow;
     font-family: $fof;
 }
+@mixin line($width,$margin,$border:1px solid $color){
+    width: $width;
+    margin: $margin;
+    border: $border;
+}

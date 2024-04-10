@@ -1,0 +1,118 @@
+.productDetailsPage{
+    margin: 3rem 5rem;
+    background-color: $darkColor;
+    border-radius: 1rem;
+    .mainContainer{
+        @include flex(row,unset,unset,2rem);
+        padding: 2rem;
+        .carouselContainer{
+            width: 50%;
+            padding: 1rem;
+            overflow: hidden;
+            position: relative;
+            background-color: $pureWhite;
+            border-radius: 1rem;
+            img.carouselImg{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        .detailsContainer{
+            width: 50%;
+            color: $halfWhite;
+            @include flex(column,unset,unset,0.5rem);
+            > h2{
+                @include hed1(2rem,500,"Roboto",0.1rem)
+            }
+            >p.id{
+                @include para(1rem,500,"Roboto")
+            }
+            > div.ratings{
+                @include flex(row,unset,center,2rem);
+                > p{
+                    @include para(1.3rem,400,"Roboto")
+                }
+            }
+            > h2.price{
+                @include hed1(2rem,500,"Roboto",0.1rem)
+            }
+            > div.quantity{
+                input{
+                    background-color: $primaryColor;
+                    padding: 0.5rem 0.1rem;
+                    border: none;
+                    outline: none;
+                    font-size: 1.5rem;
+                    color: $pureWhite;
+                    width: 30%;
+                    text-align: center;
+                    border: 1px solid $primaryColor;
+                    border-top: none;
+                    &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+                        appearance: none;
+                    }
+                }
+                >button{
+                    padding: 0.5rem 1.5rem;
+                    border: none;
+                    outline: none;
+                    background-color: $primaryColor;
+                    color: $darkColor;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    border: 1px solid $primaryColor;
+                    transition: all 0.5s;
+                    
+                    &:hover{
+                        background-color: transparent;
+                        color: $primaryColor
+                    }
+                }
+            }
+            > p{
+                @include para(1.3rem,400,"Roboto");
+                letter-spacing: 0.1rem;
+                >span{
+                    font-weight: 600;
+                }
+            }
+            >button{
+            @include button(1rem 2rem,1.5rem, 600,$darkColor,$primaryColor,1px solid $primaryColor, 0.5rem);
+            width: 40%;
+            transition: all 0.5s;
+            &:hover{
+                background-color: transparent;
+                color: $primaryColor;
+            }
+            }
+        }
+    }
+    .reviewsContainer{
+        .reviews{
+            display: flex;
+            gap: 2rem;
+            overflow: auto;
+            align-items: center;
+            width: 100%;
+        }
+        >h1{
+            @include hed1(2rem,600,"Roboto",0.1rem);
+            color: $halfWhite;
+            text-align: center;
+        }
+        >hr{
+            @include line(9rem,0 auto,1px solid $halfWhite);
+        }
+        >p{
+            @include para(1.8rem,500,"Roboto");
+            text-align: center;
+            letter-spacing: 0.1rem;
+            color: $halfWhite;
+            padding: 5rem;
+        }
+    }
+}

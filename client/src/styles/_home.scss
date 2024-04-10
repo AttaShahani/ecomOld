@@ -27,12 +27,27 @@
         }
         .button{
             button{
-                @include button(1rem 2rem,1.5rem,600,$darkColor,$primaryColor,1px solid $primaryColor,2rem);
+                @include button(1rem 2rem,1.5rem,600,$darkColor,$primaryColor,1px solid $primaryColor,0.5rem);
                 &:hover{
                     background-color: transparent;
                     color: $primaryColor;
                 }
             }
         }
+    }
+    .productsSection{
+        h1{
+            @include hed1(2.5rem,600,"Roboto",0.2rem);
+            text-align: center;
+        }
+        hr{
+          @include line(21rem,0 auto,1px solid $darkColor);
+        }
+    }
+    .productContainer{
+        @include flex(row,center,unset,2rem);
+        flex-wrap: wrap;
+        padding: 1rem 5rem;
+        margin: 5rem 0;
     }
 }

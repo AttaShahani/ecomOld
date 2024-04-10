@@ -12,6 +12,10 @@ li{
 a{
     text-decoration: none;
 }
+.toastStyle{
+    font-family: "Roboto";
+    font-size: 1.4rem;
+}
 $primaryColor:#FF8C32;
 $darkColor:#06113C;
 
@@ -20,8 +24,20 @@ $tertiaryColor:#EEEEEE;
 
 $pureWhite:#fff;
 $halfWhite:#d3d3d3;
+
+// utility classes 
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
 @import "mixins";
 @import "header";
 @import "home";
+@import "productCard";
+@import "login";
+@import "productDetails";
+@import "reviewCard";
 @import "footer";
 @import "mediaqueries";

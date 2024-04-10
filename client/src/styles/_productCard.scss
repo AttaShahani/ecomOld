@@ -1,0 +1,77 @@
+.card {
+  width: 30rem;
+  background-color: $primaryColor;
+  border-radius: 3rem;
+  padding-top: 2rem;
+  transition: all 0.5s;
+  &:hover {
+    box-shadow: 4px 3px 13px -3px rgba(0, 0, 0, 0.73);
+    -webkit-box-shadow: 4px 3px 13px -3px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 4px 3px 13px -3px rgba(0, 0, 0, 0.73);
+    transform: scale(1.01);
+
+  }
+  .container {
+    @include flex(column,center,unset,1rem);
+    background-color: $darkColor;
+    padding: 3rem 1rem;
+    border-radius: 3rem;
+    width: 100%;
+    .productImg {
+      width: 100%;
+      height: 25rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: aliceblue;
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+    .productDetails {
+      @include flex(column,unset,unset,1rem);
+      h1 {
+        @include hed1(2rem, 600, "Roboto", 0.1rem);
+        color: $halfWhite;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+      p {
+        @include para(1.5rem, 500, "Roboto");
+        color: $halfWhite;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+          @include hed1(1.6rem, 400, "Roboto", 0.1rem);
+          color: $halfWhite;
+        }
+        p {
+          @include para(1.5rem, 500, "Roboto");
+          color: $halfWhite;
+        }
+      }
+      button {
+        @include button(
+          1rem 2rem,
+          1.5rem,
+          600,
+          $darkColor,
+          $primaryColor,
+          1px solid $primaryColor,
+          0.3rem
+        );
+        width: 100%;
+        transition: all 0.5s;
+        &:hover {
+          background-color: transparent;
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
